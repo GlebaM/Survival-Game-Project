@@ -23,11 +23,12 @@ for (const any of allLanguages) {
 }
 
 
+
+
+// SECOND SECTION
 const imgSwitch = document.querySelector(".img-switch");
 const images = document.querySelectorAll('.img-gal');
 const circles = document.querySelectorAll('.round');
-
-// SECOND SECTION
 let j = 1;
 
 function changeImage() {
@@ -52,4 +53,63 @@ function changeImage() {
 
 imgSwitch.addEventListener('click', changeImage);
 
-// THIRD SECTIO
+// THIRD SECTION
+
+// const h2features = [...document.querySelectorAll(".h2-features")];
+// const featureList = [...document.querySelectorAll(".feature-list")];
+
+const $h2features = $(".h2-features");
+const $featureList = $(".feature-list");
+const $circleList = $("footer div h2");
+
+
+for (let i = 0; i <= $h2features.length; i++) {
+    $($h2features[i]).on("click", function() {
+        $featureList.addClass("hidden");
+        $circleList.removeClass("white");
+        $featureList[i].classList.remove("hidden");
+        $circleList[i].classList.add("white")
+    })
+}
+
+// Section sixth Nieskończone
+
+const newsButton = document.querySelector(".news-footer button");
+const newsInput = document.querySelector(".news-input");
+const newsAlert = document.querySelector(".news-alert");
+const newsSpan = document.querySelector(".news-alert>p>span")
+
+// const emailAlert = function() {
+
+
+//     if (!newsInput.innerHTML === true) {
+//         newsAlert.classList.add('active');
+//         newsSpan.innerHTML = `Uwzględnij znak '@' w adresie email. W podanym adresie brakuje znaku '@'`;
+//         setTimeout(() => {
+//             newsAlert.classList.remove('active')
+
+//         }, 4000);
+//     } else if (newsInput.includes("@")) {
+//         newsAlert.classList.add('active');
+//         newsSpan.innerHTML = `Please include "@" in your e-mail address`;
+//     }
+
+// }
+// newsButton.addEventListener("click", emailAlert);
+
+// $(document).ready(function($) {
+//     $('*:not(.news-footer button)').on("click", function() {
+//         $('.news-alert').removeClass('active');
+//     });
+// });
+
+
+
+$('.submitBtn').on('click', function(e) {
+    e.preventDefault();
+    email = $("#user_email").toArray().includes("@");
+
+
+    console.log(email)
+
+});
