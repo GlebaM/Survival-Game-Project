@@ -74,42 +74,33 @@ for (let i = 0; i <= $h2features.length; i++) {
 
 // Section sixth Nieskończone
 
-const newsButton = document.querySelector(".news-footer button");
+const newsButton = document.querySelector(".submitBtn");
 const newsInput = document.querySelector(".news-input");
+const newsEmail = document.querySelector("[data-email]");
 const newsAlert = document.querySelector(".news-alert");
 const newsSpan = document.querySelector(".news-alert>p>span")
 
-// const emailAlert = function() {
 
 
-//     if (!newsInput.innerHTML === true) {
-//         newsAlert.classList.add('active');
-//         newsSpan.innerHTML = `Uwzględnij znak '@' w adresie email. W podanym adresie brakuje znaku '@'`;
-//         setTimeout(() => {
-//             newsAlert.classList.remove('active')
+function emailAlert() {
 
-//         }, 4000);
-//     } else if (newsInput.includes("@")) {
-//         newsAlert.classList.add('active');
-//         newsSpan.innerHTML = `Please include "@" in your e-mail address`;
-//     }
+    if (!newsInput.textContent) {
+        newsAlert.classList.add('active');
+        setTimeout(() => {
+            newsAlert.classList.remove('active')
 
-// }
-// newsButton.addEventListener("click", emailAlert);
+        }, 4000);
+
+    } //  else if (newsInput.includes("@")) {
+    //     newsAlert.classList.add('active');
+    //     newsSpan.innerHTML = `Please include "@" in your e-mail address`;
+}
+
+
+newsButton.addEventListener("click", emailAlert);
 
 // $(document).ready(function($) {
-//     $('*:not(.news-footer button)').on("click", function() {
+//     $('*:not(.submitBtn)').on("click", function() {
 //         $('.news-alert').removeClass('active');
 //     });
 // });
-
-
-
-$('.submitBtn').on('click', function(e) {
-    e.preventDefault();
-    email = $("#user_email").toArray().includes("@");
-
-
-    console.log(email)
-
-});
