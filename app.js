@@ -72,19 +72,19 @@ for (let i = 0; i <= $h2features.length; i++) {
     })
 }
 
-// Section sixth Nieskończone
+// Section sixth - Not finished
 
 const newsButton = document.querySelector(".submitBtn");
 const newsInput = document.querySelector(".news-input");
-const newsEmail = document.querySelector("[data-email]");
+const newsEmail = document.querySelector("[data-mail]");
 const newsAlert = document.querySelector(".news-alert");
 const newsSpan = document.querySelector(".news-alert>p>span")
 
 
 
 function emailAlert() {
-
-    if (!newsInput.textContent) {
+    //  newsEmail.textContent = newsInput.textContent;
+    if (!newsInput.nodeValue) {
         newsAlert.classList.add('active');
         setTimeout(() => {
             newsAlert.classList.remove('active')
@@ -95,7 +95,6 @@ function emailAlert() {
     //     newsAlert.classList.add('active');
     //     newsSpan.innerHTML = `Please include "@" in your e-mail address`;
 }
-
 
 newsButton.addEventListener("click", emailAlert);
 

@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato&family=Montserrat&family=Open+Sans&family=Oswald&family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="mQueries.css">
 </head>
 
 <body>
@@ -109,7 +110,7 @@
 
                 </aside>
                 <figure class="gallery-img">
-                    <div class="img-padder">
+                    <div class="imgs-father">
                         <img class="img-gal" src="Images/g-1.png">
                         <img class="hide img-gal" src="Images/g-2.png" alt="" srcset="">
                         <img class="hide img-gal" src="Images/g-3.png" alt="" srcset="">
@@ -138,7 +139,7 @@
                     <h1>Features</h1>
                 </header>
                 <footer>
-                    <div>
+                    <div class="dot-connection">
                         <h2 class="h2-features h2-1-feat white">
                             Survive at all costs.
                         </h2>
@@ -146,7 +147,7 @@
                             You have 30 minutes to find a relic, signal for extraction, and grab one of three spots on the rescue chopper.
                         </p>
                     </div>
-                    <div>
+                    <div class="dot-connection">
                         <h2 class="h2-features">
                             Create allies and Enemies
                         </h2>
@@ -301,9 +302,9 @@
         </div>
 
 
-        </div>
+        <!-- </div>
 
-        </div>
+        </div> -->
     </section>
 
     <section class="sec-six sec" id="six">
@@ -316,9 +317,9 @@
                 <div class="news-text">
                     <p>In order to start receiving our news, all you have to do is enter your email address. Everything else will be taken care of by us. We will send you emails containing information about game. We don’t spam.</p>
                 </div>
-                <div class="news-footer">
-                    <input data-email="" class="news-input" type="text" placeholder="Your e-mail address">
-                    <button class="submitBtn"> Subscribe now </button>
+                <div data-mail="mail" class="news-footer">
+                    <input class="news-input" type="email" placeholder="Your e-mail address">
+                    <button type="submit" class="submitBtn"> Subscribe now </button>
                     <div class="news-alert">
                         <p>
                             <i class="fas fa-exclamation-triangle"></i>
