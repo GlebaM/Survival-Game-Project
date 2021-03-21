@@ -101,9 +101,6 @@
         .newsletter {
             text-align: center;
         }
-        .news-text h1 {
-            /* text-align: center; */
-        }
         .news-footer {
             /* flex-direction: column; */
             flex-wrap: wrap;
