@@ -13,10 +13,10 @@
             }
             
             body {
-                position: relative;
-                display: flex;
-                flex-direction: column;
                 font-family: "OpenSans", Helvetica, sans-serif;
+            }
+            
+            .wrapper {
                 font-size: 20px;
                 letter-spacing: .3px;
                 color: white;
@@ -34,7 +34,6 @@
                 margin-top: 10px;
                 margin-bottom: 10px;
                 color: var(--orange);
-                /* word-wrap: break-word; */
             }
             
             h2 {
@@ -45,7 +44,6 @@
                 line-height: 1;
                 text-transform: uppercase;
                 color: var(--orange);
-                /* background-color: aliceblue; */
             }
             
             h3 {
@@ -57,7 +55,7 @@
                 text-transform: uppercase;
             }
             
-            h3.top {
+            .top {
                 color: var(--orange);
             }
             
@@ -176,7 +174,6 @@
                 margin-top: -8px;
                 margin-right: 1.4rem;
                 font-size: 1rem;
-                /* align-self: flex-end; */
                 padding-top: 14px;
                 transition: 0.12s;
             }
@@ -227,7 +224,6 @@
             /* All pages layout including background images and gradients - display:flex */
             
             .sec {
-                /* border: 1px solid red; */
                 position: relative;
                 flex-basis: 100vh;
                 background-position: center, center;
@@ -241,12 +237,13 @@
             }
             /* SECTION ONE - MAIN PAGE!!! */
             
-            .sec-one {
+            .sec-about-us {
                 background-image: url("Images/1.1intro-bg.png");
                 text-align: center;
             }
             
             .wrapper-one {
+                position: relative;
                 background: radial-gradient(rgba(255, 181, 72, 0) 0%, rgba(52, 44, 29, 0.8032) 73.22%, rgb(8, 9, 10) 99.74%);
             }
             
@@ -259,7 +256,7 @@
                 align-items: center;
             }
             
-            button {
+            .button {
                 line-height: 3.4rem;
                 padding: 0 1.4rem;
                 text-align: center;
@@ -271,11 +268,11 @@
                 border-radius: 5px;
             }
             
-            .main-content button {
+            .btn-Buy {
                 margin: 1.5rem auto;
             }
             
-            .btnBuy span {
+            .btn-Buy span {
                 border-left: 1px solid rgb(26, 25, 23);
                 margin-left: 0.6rem;
                 padding-left: 0.6rem;
@@ -316,7 +313,6 @@
             .wrapper-two {
                 position: relative;
                 background-color: rgba(17, 16, 16, 0.91);
-                /* background-color: #FEB548; */
             }
             
             .gallery-wrapper {
@@ -328,7 +324,6 @@
                 flex-direction: row;
                 align-items: center;
                 justify-content: center;
-                /* background-color: #ff000041; */
             }
             
             .gallery-text {
@@ -339,7 +334,6 @@
                 flex-basis: 10%;
                 height: 86%;
                 align-self: center;
-                /* background-color: #feb54873; */
             }
             
             .head-wrap,
@@ -384,7 +378,6 @@
                 justify-content: space-around;
                 align-self: center;
                 align-items: center;
-                /* background-color: #43648f88; */
             }
             
             .imgs-father {
@@ -415,10 +408,7 @@
                 justify-content: space-around;
                 width: 100%;
                 height: 15px;
-                /* background-color: #b4f50371; */
                 bottom: 5%;
-                /* margin: 0 15%; */
-                /* padding-bottom: 5%; */
             }
             
             .round {
@@ -434,7 +424,6 @@
             
             .img-switch a {
                 position: relative;
-                /* display: inline; */
                 top: 50%;
                 width: 23%;
             }
@@ -451,8 +440,6 @@
             .wrapper-three {
                 background: radial-gradient(rgba(255, 255, 255, 0.04) 0%, rgba(0, 0, 0, .45) 55%, rgb(8, 10, 11, .98) 85%);
                 position: absolute;
-                /* display: flex; */
-                /* flex-direction: column; */
             }
             
             .feature-wrap {
@@ -802,7 +789,6 @@
             }
             
             .submitBtn {
-                /* display: inline-block; */
                 padding: 0 10%;
                 margin-left: 4%;
                 float: right;
