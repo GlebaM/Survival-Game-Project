@@ -5,8 +5,8 @@
             }
             
             body {
-                margin: 0;
-                padding: 0;
+                /* margin: 0;
+                padding: 0; */
                 font-family: "OpenSans", Helvetica, sans-serif;
             }
             
@@ -241,12 +241,12 @@
             }
             /* SECTION ONE - MAIN PAGE!!! */
             
-            .sec-one {
+            .sec-main {
                 background-image: url("Images/1.1intro-bg.png");
                 text-align: center;
             }
             
-            .wrapper-one {
+            .wrapper-main {
                 background: radial-gradient(rgba(255, 181, 72, 0) 0%, rgba(52, 44, 29, 0.8032) 73.22%, rgb(8, 9, 10) 99.74%);
             }
             
@@ -259,10 +259,9 @@
                 align-items: center;
             }
             
-            button {
+            .button {
                 line-height: 3.4rem;
                 padding: 0 1.4rem;
-                text-align: center;
                 background-color: var(--orange);
                 font-size: 16px;
                 font-weight: 600;
@@ -275,7 +274,7 @@
                 margin: 1.5rem auto;
             }
             
-            .btnBuy span {
+            .btn-buy span {
                 border-left: 1px solid rgb(26, 25, 23);
                 margin-left: 0.6rem;
                 padding-left: 0.6rem;
@@ -309,11 +308,11 @@
             }
             /* SECTION TWO - GALLERY */
             
-            .sec-two {
+            .sec-about-us {
                 background-image: url("Images/2.1about-bg.png");
             }
             
-            .wrapper-two {
+            .wrapper-about-us {
                 position: relative;
                 background-color: rgba(17, 16, 16, 0.91);
                 /* background-color: #FEB548; */
@@ -438,11 +437,11 @@
             }
             /* SECTION THREE  -  FEATURES */
             
-            .sec-three {
+            .sec-features {
                 background-image: url("Images/3.1features-bg.png");
             }
             
-            .wrapper-three {
+            .wrapper-features {
                 background: radial-gradient(rgba(255, 255, 255, 0.04) 0%, rgba(0, 0, 0, .45) 55%, rgb(8, 10, 11, .98) 85%);
                 position: absolute;
             }
@@ -516,11 +515,11 @@
             }
             /* SECTION FOUR  -  SYSTEM REQUIREMENTS */
             
-            .sec-four {
+            .sec-sys-req {
                 background-image: url("Images/4.1system-bg.png");
             }
             
-            .wrapper-four {
+            .wrapper-sys-req {
                 position: relative;
                 display: flex;
                 flex-direction: column;
@@ -570,22 +569,17 @@
             /* SECTION FIVE - QUOTES */
             /* Whole */
             
-            .sec-five {
+            .sec-quotes {
                 background-image: url("Images/5.1quotes-bg.png");
                 display: flex;
             }
             
-            .wrapper-five {
+            .wrapper-quotes {
                 max-width: 1200px;
                 height: 92vh;
                 margin: 0 auto;
                 display: flex;
                 align-self: center;
-            }
-            
-            .pos-rel-fixed {
-                position: relative;
-                display: flex;
             }
             /*  first part of page 5 */
             
@@ -619,6 +613,8 @@
             /* Second part of page 5 */
             
             .quote-bubbles {
+                position: relative;
+                display: flex;
                 flex-basis: 47%;
             }
             
@@ -680,19 +676,18 @@
             .fab.fa-twitter {
                 font-size: small;
                 background-color: transparent;
+                background: url('https://twitter.com/');
                 color: rgb(91, 183, 245);
             }
             /* SECTION SIX - NEWSLETTER */
             
-            .sec-six {
+            .sec-newsletter {
                 background-image: url("Images/6.newsletter-bg.png");
-                position: relative;
                 display: flex;
                 justify-content: flex-end;
             }
             
-            .wrapper-six {
-                position: relative;
+            .wrapper-newsletter {
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
@@ -700,7 +695,6 @@
             }
             
             .newsletter {
-                position: relative;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
@@ -713,7 +707,6 @@
             }
             
             .news-footer {
-                position: relative;
                 display: flex;
                 justify-content: space-between;
             }
