@@ -28,7 +28,7 @@ $(document).ready(function() {
     }
     $(".switch-lang-wrap").on("click", activeLang)
 
-    $(".hidden-lang>a").on('click', function() {
+    $(".hidden-lang>li").on('click', function() {
         $(".picked-language").html($(this).html());
         languagesList.toggleClass("active");
     });
@@ -81,24 +81,21 @@ $(document).ready(function() {
     // THIRD SECTION
     const $h2features = $(".h2-features");
     const $featureList = $(".feature-list");
-    const $circleList = $("footer div h2");
 
     for (let i = 0; i <= $h2features.length; i++) {
         $($h2features[i]).on("click", function() {
             $featureList.addClass("hidden");
-            $circleList.removeClass("white");
+            $h2features.removeClass("white");
             $featureList[i].classList.remove("hidden");
-            $circleList[i].classList.add("white")
+            $h2features[i].classList.add("white")
         })
     }
-
     // Section sixth - Not finished
 
-
-    var form = document.querySelector("#my-form");
+    // Wiem że miało być onsubmit ale znalazłem coś takiego
+    let form = document.querySelector("#my-form");
 
     async function handleSubmit(event) {
-        console.log("ewkosgfh")
         event.preventDefault();
         var status = document.querySelector("#submit-status");
         var data = new FormData(event.target);
@@ -110,6 +107,9 @@ $(document).ready(function() {
             }
         }).then(response => {
             $(".news-alert").addClass("active");
+            setTimeout(function() {
+                $(".news-alert").removeClass("active");
+            }, 4000)
             status.textContent = "Thanks for your submission!";
             form.reset()
         }).catch(error => {
@@ -117,5 +117,9 @@ $(document).ready(function() {
         });
     }
     form.addEventListener("submit", handleSubmit)
+
+    $(".news-input").on("click", function() {
+        $(".news-alert").removeClass("active");
+    })
 
 });
