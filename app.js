@@ -79,15 +79,11 @@ $(document).ready(function() {
     $(".img-switch").on('click', changeImage);
 
     // THIRD SECTION
-
-
     const $h2features = $(".h2-features");
     const $featureList = $(".feature-list");
     const $circleList = $("footer div h2");
 
-
     for (let i = 0; i <= $h2features.length; i++) {
-
         $($h2features[i]).on("click", function() {
             $featureList.addClass("hidden");
             $circleList.removeClass("white");
@@ -98,32 +94,28 @@ $(document).ready(function() {
 
     // Section sixth - Not finished
 
-    const newsButton = document.querySelector(".submitBtn");
-    const newsInput = document.querySelector(".news-input");
-    // const newsEmail = document.querySelector("[data-mail]");
-    const newsAlert = document.querySelector(".news-alert");
-    // const newsSpan = document.querySelector(".news-alert>p>span")
 
-    function emailAlert() {
-        //  newsEmail.textContent = newsInput.textContent;
-        if (!newsInput.nodeValue) {
-            newsAlert.classList.add('active');
-            setTimeout(() => {
-                newsAlert.classList.remove('active')
+    var form = document.querySelector("#my-form");
 
-            }, 4000);
-
-        } //  else if (newsInput.includes("@")) {
-        //     newsAlert.classList.add('active');
-        //     newsSpan.innerHTML = `Please include "@" in your e-mail address`;
+    async function handleSubmit(event) {
+        console.log("ewkosgfh")
+        event.preventDefault();
+        var status = document.querySelector("#submit-status");
+        var data = new FormData(event.target);
+        fetch(event.target.action, {
+            method: form.method,
+            body: data,
+            headers: {
+                'Accept': 'application/json'
+            }
+        }).then(response => {
+            $(".news-alert").addClass("active");
+            status.textContent = "Thanks for your submission!";
+            form.reset()
+        }).catch(error => {
+            status.textContent = "Oops! There was a problem submitting your form. Address is wrong or. Please fill this box!!!"
+        });
     }
-
-    newsButton.addEventListener("click", emailAlert);
-
-    // $(document).ready(function($) {
-    //     $('*:not(.submitBtn)').on("click", function() {
-    //         $('.news-alert').removeClass('active');
-    //     });
-    // });
+    form.addEventListener("submit", handleSubmit)
 
 });

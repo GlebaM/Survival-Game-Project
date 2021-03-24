@@ -231,7 +231,7 @@
                                     <h4>PC Gamer</h4>
                                 </div>
                                 <div>
-                                    <a href="">
+                                    <a href="https://twitter.com/?lang=en" target="blank">
                                         <i class="fab fa-twitter"></i>
                                     </a>
                                 </div>
@@ -252,7 +252,7 @@
                                     <h4>Nerdreactor</h4>
                                 </div>
                                 <div>
-                                    <a href="">
+                                    <a href="https://twitter.com/?lang=en" target="blank">
                                         <i class="fab fa-twitter"></i>
                                     </a>
                                 </div>
@@ -273,7 +273,7 @@
                                     <h4>Uproxx</h4>
                                 </div>
                                 <div>
-                                    <a href="">
+                                    <a href="https://twitter.com/?lang=en" target="blank">
                                         <i class="fab fa-twitter"></i>
                                     </a>
                                 </div>
@@ -299,16 +299,19 @@
                         <p>In order to start receiving our news, all you have to do is enter your email address. Everything else will be taken care of by us. We will send you emails containing information about game. We don’t spam.
                         </p>
                     </div>
+
                     <div data-mail="mail" class="news-footer">
-                        <input class="news-input" type="email" placeholder="Your e-mail address">
-                        <button type="submit" class="submitBtn button"> Subscribe now </button>
+                        <form class="news-footer-form" id="my-form" action="https://formspree.io/f/mknkwznr" method="POST">
+                            <input class="news-input" name="email" id="email" type="email" placeholder="Please, type your e-mail!" address minlength="6" required>
+                            <button type="submit" id="submit-btn" class="submit-btn button">Subscribe
+                                now</button>
+                        </form>
                         <div class="news-alert">
-                            <p>
-                                <i class="fas fa-exclamation-triangle"></i>
-                                <span>The box is empty. Please fill this box!!!</span>
-                            </p>
+                            <p id="submit-status"></p>
                         </div>
                     </div>
+
+
                 </div>
             </div>
         </section>
@@ -338,10 +341,22 @@
                     </ul>
                 </nav>
                 <aside class="bottom-icons">
-                    <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://twitter.com/?lang=en"><i class="fab fa-twitter ai"></i></a>
-                    <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
-                    <a href="https://www.twitch.tv/"><i class="fab fa-twitch"></i></a>
+                    <a href="https://www.facebook.com/" target="blank">
+                        <!-- <img class="icons" src="./assets/icons/facebook.svg" alt="facebook"> -->
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://twitter.com/?lang=en" target="blank">
+                        <!-- <img class="icons" src="./assets/icons/twitter.svg" alt="twitter"> -->
+                        <i class="fab fa-twitter ai"></i>
+                    </a>
+                    <a href="https://www.youtube.com/" target="blank">
+                        <!-- <img class="icons" src="./assets/icons/youtube.svg" alt="youtue"> -->
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://www.twitch.tv/" target="blank">
+                        <!-- <img class="icons" src="./assets/icons/twitch.svg" alt="twitch"> -->
+                        <i class="fab fa-twitch"></i>
+                    </a>
                 </aside>
             </div>
             <div class="footer-bottom">
@@ -352,16 +367,17 @@
                         </h5>
                     </div>
                     <div>
-                        <a href="#">Privacy Policy</a>
-                        <a href="#">Terms of services</a>
-                        <a href="#">code of conduct</a>
+                        <a href="#" target="blank">Privacy Policy</a>
+                        <a href="#" target="blank">Terms of services</a>
+                        <a href="#" target="blank">code of conduct</a>
                     </div>
                 </div>
             </div>
         </footer>
     </div>
     <script src='/assets/libraries/JQuery/jquery.min.js'></script>
-    <script src="app.js"></script>
+    <script src="./app.js"></script>
+
 </body>
 
 </html>
