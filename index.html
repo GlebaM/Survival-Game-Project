@@ -16,58 +16,76 @@
 
 <body>
     <div class="wrapper">
-        <header class="header-wrap">
-            <div class="header-content">
+        <header class="header-wrap flex-abs">
+            <div class="header-content flex-rel">
                 <div class="img-SOS">
                     <a href="#">
                         <img src="assets/images/6.left_logo.png" alt="">
                     </a>
                 </div>
-                <nav class="nav-main">
-                    <ul class="main-ul">
-                        <li>
-                            <a href="#main">Main</a>
-                        </li>
-                        <li>
-                            <a href="#about-us">About</a>
-                        </li>
-                        <li>
-                            <a href="#features">Game Features</a>
-                        </li>
-                        <li>
-                            <a href="#sys-req">System Requirements</a>
-                        </li>
-                        <li>
-                            <a href="#quotes">Quotes</a>
-                        </li>
-                    </ul>
-                </nav>
-                <div class="switch-lang">
+                <div class="grow"></div>
+                <div class="primary-menu flex-rel">
+                    <nav class="nav-main flex-rel">
+                        <ul class="main-ul flex-rel">
+                            <li>
+                                <a href="#main">Main</a>
+                            </li>
+                            <li>
+                                <a href="#about-us">About</a>
+                            </li>
+                            <li>
+                                <a href="#features">Game Features</a>
+                            </li>
+                            <li>
+                                <a href="#sys-req">System Requirements</a>
+                            </li>
+                            <li>
+                                <a href="#quotes">Quotes</a>
+                            </li>
+                        </ul>
+                        <div class=" platforms-hid flex-rel">
+                            <a href="https://www.xbox.com/pl-PL/" target="blank">
+                                <i class="fab fa-xbox top-icons"> </i>
+                            </a>
+                            <a href="https://store.steampowered.com/" target="blank">
+                                <i class="fab fa-steam top-icons"> </i>
+                            </a>
+                        </div>
+                    </nav>
+                </div>
+                <div class="switch-lang flex-rel">
                     <div class="switch-lang-wrap">
                         <a class="picked-language" href="#">Eng</a>
                         <a href="#"><i class="fas fa-angle-down arrows"></i></a>
                         <a href="#"><i class="fas fa-angle-up arrows active"></i></a>
+                        <div class="div-lang flex-abs">
+                            <ul class="hidden-lang ">
+                                <li><a href="#"><span>Eng</span></a></li>
+                                <li><a href="#"><span> Rus</span></a></li>
+                                <li><a href="#"><span> Fra</span></a></li>
+                                <li><a href="#"><span> Deu</span></a></li>
+                                <li><a href="#"><span> Pol</span></a></li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="flex div-lang">
-                        <ul class="hidden-lang">
-                            <li><a href="#"><span></span>Eng</span></a></li>
-                            <li><a href="#"><span> Rus</span></a></li>
-                            <li><a href="#"><span> Fra</span></a></li>
-                            <li><a href="#"><span> Deu</span></a></li>
-                            <li><a href="#"><span> Pol</span></a></li>
-                        </ul>
-                    </div>
+
                 </div>
-                <div class="platforms">
-                    <a href="https://www.xbox.com/pl-PL/" target="blank"><i class="fab fa-xbox"></i></a>
-                    <a href="https://store.steampowered.com/" target="blank"><i class="fab fa-steam"></i></a>
+
+
+                <div class="platforms showed-platform flex-rel">
+                    <a href="https://www.xbox.com/pl-PL/" target="blank"><i class="fab fa-xbox top-icons"></i></a>
+                    <a href="https://store.steampowered.com/" target="blank"><i class="fab fa-steam top-icons"></i></a>
                 </div>
+
+
             </div>
         </header>
 
+
+
         <section class="sec-main sec" id="main">
             <div class="wrapper-main sec-container">
-                <div class="main-content">
+                <div class="main-content flex-rel">
                     <div>
                         <h1 class="h1-shadow">Survive at all costs</h1>
                     </div>
@@ -88,8 +106,8 @@
         </section>
 
         <section class="sec-about-us sec" id="about-us">
-            <div class="wrapper-about-us sec-container" id="sec-about">
-                <div class="gallery-wrapper">
+            <div class="wrapper-about-us sec-container flex-rel" id="sec-about">
+                <div class="gallery-wrapper flex-rel">
                     <aside class="gallery-text">
                         <div class="head-wrap">
                             <h3>What is sos?</h3>
@@ -113,7 +131,7 @@
                                 <li class="img-gal "></li>
                                 <li class="img-gal "></li>
                                 <li class="img-gal "></li>
-                                <ul class="circles-container">
+                                <ul class="circles-container flex-abs">
                                     <li class="round active"></li>
                                     <li class="round"></li>
                                     <li class="round"></li>
@@ -132,7 +150,7 @@
 
         <section class="sec-features sec" id="features">
             <div class="wrapper-features sec-container">
-                <div class="feature-wrap">
+                <div class="feature-wrap flex-rel">
                     <header>
                         <h3>What's so special?</h3>
                         <h1>Features</h1>
@@ -168,14 +186,14 @@
         </section>
 
         <section class="sec-sys-req sec" id="sys-req">
-            <div class="wrapper-sys-req sec-container">
-                <div class="sys-req-head">
+            <div class="wrapper-sys-req sec-container flex-rel">
+                <div class="sys-req-head flex-rel">
                     <div>
                         <h3>Can my computer run this game?</h3>
                         <h1>System Requirements</h1>
                     </div>
                 </div>
-                <div class="sys-req-foot">
+                <div class="sys-req-foot flex-rel">
                     <div>
                         <h3 class="color-primary">OS:</h3>
                         <p>Windows 7 64-bit only (No OSX support at this time)</p>
@@ -205,7 +223,7 @@
             <div class="wrapper-quotes sec-container">
                 <div class="quote-text ">
                     <div class="text-container">
-                        <div class="text-wrapper">
+                        <div class="text-wrapper flex-rel">
                             <div class="quote-header">
                                 <h3>What people think?</h3>
                                 <h1>Press quotes</h1>
@@ -222,7 +240,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="quote-bubbles">
+                <div class="quote-bubbles flex-rel">
                     <div class="bubbles-container">
                         <div class="bubble">
                             <div class="bubble-header">
@@ -242,7 +260,7 @@
                             </div>
                             <div class="bubble-footer">
                                 <p> “One of my gaming highlights of the year.”</p>
-                                <h5>October 18, 2018</h5>
+                                <h4 class="h4-small">October 18, 2018</h4>
                             </div>
                         </div>
                         <div class="bubble">
@@ -263,7 +281,7 @@
                             </div>
                             <div class="bubble-footer">
                                 <p> “The next big thing in the world of streaming and survival games.”</p>
-                                <h5>December 21, 2018</h5>
+                                <h4 class="h4-small">December 21, 2018</h4>
                             </div>
                         </div>
                         <div class="bubble">
@@ -284,7 +302,7 @@
                             </div>
                             <div class="bubble-footer">
                                 <p> “Snoop Dogg Playing The Wildly Entertaining ‘SOS’ Is Ridiculous.”</p>
-                                <h5>December 24, 2018</h5>
+                                <h4 class="h4-small">December 24, 2018</h4>
                             </div>
                         </div>
                     </div>
@@ -294,7 +312,7 @@
 
         <section class="sec-newsletter sec">
             <div class="wrapper-newsletter sec-container">
-                <div class="newsletter">
+                <div class="newsletter flex-rel">
                     <div class="news-header">
                         <h3>Want to stay in touch?</h3>
                         <h1>Newsletter Subscribe</h1>
@@ -304,8 +322,8 @@
                         </p>
                     </div>
 
-                    <div class="news-footer">
-                        <form class="news-footer-form" id="my-form" action="https://formspree.io/f/mknkwznr" method="POST">
+                    <div class="news-footer flex-rel">
+                        <form class="news-footer-form flex-rel" id="my-form" action="https://formspree.io/f/mknkwznr" method="POST">
                             <input class="news-input" name="email" id="email" type="email" placeholder="Please, type your e-mail!" address minlength="6" required>
                             <button type="submit" id="submit-btn" class="submit-btn button">Subscribe
                                 now</button>
@@ -320,13 +338,13 @@
             </div>
         </section>
 
-        <footer id="footer-wrapper">
-            <div class="footer-nav">
+        <footer id="footer-wrapper" class="flex-rel">
+            <div class="footer-nav flex-rel">
                 <div class="footer-img">
                     <img src="assets/images/1-6.logo.png" alt="">
                 </div>
-                <nav class="nav-main nav-bottom">
-                    <ul class="main-ul marg-bottom-ul">
+                <nav class=" nav-bottom">
+                    <ul class="marg-bottom-ul flex-rel">
                         <li>
                             <a href="#main">Main</a>
                         </li>
@@ -363,12 +381,12 @@
                     </a>
                 </aside>
             </div>
-            <div class="footer-bottom">
+            <div class="footer-bottom flex-rel">
                 <div class="bottom-links">
                     <div>
-                        <h5 class="copyright">
+                        <h4 class="copyright h4-small">
                             © 2020 Outpost Games, Inc. All Rights Reserved
-                        </h5>
+                        </h4>
                     </div>
                     <div class="policy">
                         <a href="#" target="blank">Privacy Policy</a>

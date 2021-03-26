@@ -20,17 +20,17 @@ $(document).ready(function() {
     //     });
     // }
     // FIRST SECTION - jQuerry
-    const languagesList = $(".hidden-lang")
+
 
     function activeLang() {
-        languagesList.toggleClass("active");
+        $(".hidden-lang").toggleClass("active");
         $(".arrows").toggleClass("active");
     }
     $(".switch-lang-wrap").on("click", activeLang)
 
     $(".hidden-lang>li").on('click', function() {
         $(".picked-language").html($(this).html());
-        languagesList.toggleClass("active");
+        $(".hidden-lang").toggleClass("active");
     });
 
     // SECOND SECTION
