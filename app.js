@@ -64,11 +64,11 @@ $(document).ready(function() {
     let j = 1;
 
     function changeImage() {
-        $('.img-gal').addClass('hide');
+        $('.img-gal').removeClass('show');
         $('.round').removeClass('active');
 
         if (j < images.length) {
-            images[j].classList.remove("hide");
+            images[j].classList.add("show");
             circles[j].classList.add("active");
             j++
             if (j >= 4) {
@@ -77,6 +77,7 @@ $(document).ready(function() {
         }
     }
     $(".img-switch").on('click', changeImage);
+
 
     // THIRD SECTION
     const $h2features = $(".h2-features");
