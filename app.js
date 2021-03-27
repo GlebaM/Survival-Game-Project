@@ -21,17 +21,31 @@ $(document).ready(function() {
     // }
     // FIRST SECTION - jQuerry
 
-
+    // Desktop menu
     function activeLang() {
         $(".hidden-lang").toggleClass("active");
         $(".arrows").toggleClass("active");
+        $(".nav-main").removeClass("show");
     }
     $(".switch-lang-wrap").on("click", activeLang)
 
     $(".hidden-lang>li").on('click', function() {
-        $(".picked-language").html($(this).html());
-        $(".hidden-lang").toggleClass("active");
+        $(".picked-language").text($(this).text());
+        $(".hidden-lang").removeClass("active");
     });
+
+    // Mobile menu
+    $('.menu-icon').on('click', function() {
+        $(".hidden-lang").removeClass("active");
+        $(".nav-main").toggleClass("show");
+        if ($(".fa-angle-down.active")) {
+            $(".fa-angle-down.active").removeClass("active")
+            $(".fa-angle-up").addClass("active")
+        } else if ($(".fa-angle-up.arrows.active")) {
+            $(".fa-angle-down.active").addClass("active")
+            $(".fa-angle-up").removeClass("active")
+        }
+    })
 
     // SECOND SECTION
     // JS used
