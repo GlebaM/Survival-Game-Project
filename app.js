@@ -38,6 +38,7 @@ $(document).ready(function() {
     $('.menu-icon').on('click', function() {
         $(".hidden-lang").removeClass("active");
         $(".nav-main").toggleClass("show");
+        $(".stripe-middle, .stripe-bottom").toggleClass("change");
         if ($(".fa-angle-down.active")) {
             $(".fa-angle-down.active").removeClass("active")
             $(".fa-angle-up").addClass("active")
@@ -46,6 +47,8 @@ $(document).ready(function() {
             $(".fa-angle-up").removeClass("active")
         }
     })
+
+    $('.primary-menu a').click(() => $(".nav-main").toggleClass("show"));
 
     // SECOND SECTION
     // JS used
@@ -96,6 +99,16 @@ $(document).ready(function() {
     // THIRD SECTION
     const $h2features = $(".h2-features");
     const $featureList = $(".feature-list");
+
+    $h2features.click(function() {
+        const $thisFeatureList = $(this).next();
+
+        $h2features.removeClass("white");
+        $(this).addClass("white");
+
+        $featureList.addClass("hidden");
+        $thisFeatureList.removeClass("hidden");
+    });
 
     for (let i = 0; i <= $h2features.length; i++) {
         $($h2features[i]).on("click", function() {

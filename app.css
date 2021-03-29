@@ -16,6 +16,7 @@ html {
     --orange: #FEB548;
     --grey-fonts-h4-h5: #c3c6c7;
     --main-background: rgb(0, 0, 0, 0.965);
+    --menu-shadow-background: rgba(7, 7, 7, 0.55);
     --nav-border: rgb(187, 184, 184);
     --bubble-background: rgba(49, 48, 48, 0.555);
     --shadow-background: rgba(17, 16, 16, 0.91);
@@ -211,6 +212,7 @@ a:hover {
 
 .div-lang {
     overflow: hidden;
+    left: -4px;
     top: 50px;
     width: 60px;
     height: 125px;
@@ -224,7 +226,7 @@ a:hover {
     top: -110px;
     width: 100%;
     height: 100%;
-    background-color: rgba(7, 7, 7, 0.55);
+    background-color: var(--menu-shadow-background);
     visibility: hidden;
     opacity: 0;
     transition: visibility .5s ease-in-out, opacity .5s ease-in-out, top .5s ease-in-out;
@@ -256,10 +258,17 @@ a:hover {
 
 .menu-icon {
     display: none;
+    position: absolute;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 22px;
+    height: 20px;
+    top: 2px;
+    left: 94px;
 }
 
 .menu-icon div {
-    transition: background-color .3s ease, box-shadow .3s ease;
+    transition: background-color .3s ease, box-shadow .3s ease, width 1s ease;
 }
 
 .menu-icon:hover {
@@ -269,6 +278,22 @@ a:hover {
 .menu-icon:hover div {
     box-shadow: 0 0 3px#f1dcbb;
     background-color: var(--orange);
+}
+
+.short {
+    transition: width 1s ease;
+    /* margin: 0 0 0 auto; */
+}
+
+.short.stripe-middle.change {
+    width: 75%;
+    align-self: auto;
+    /* transition: width 1s ease; */
+}
+
+.short.stripe-bottom.change {
+    width: 50%;
+    /* transition: width 1s ease; */
 }
 
 @media(max-width:880px) {
@@ -281,7 +306,7 @@ a:hover {
     .primary-menu {
         position: absolute;
         flex-direction: column;
-        background-color: rgba(7, 7, 7, 0.55);
+        background-color: var(--menu-shadow-background);
         right: 17px;
         top: 60px;
         border-radius: 6px;
@@ -291,7 +316,7 @@ a:hover {
     .nav-main {
         flex-grow: 0;
         flex-direction: column;
-        justify-content: first baseline;
+        justify-content: baseline;
         display: none;
     }
     .nav-main.show {
@@ -307,7 +332,8 @@ a:hover {
     }
     .main-ul li:last-of-type {
         border-bottom: 1px solid var(--nav-border);
-        padding-bottom: 6px;
+        padding: 0 0 6px 0;
+        margin-right: 11px;
     }
     .switch-lang {
         position: absolute;
@@ -329,14 +355,7 @@ a:hover {
         font-size: small;
     }
     .menu-icon {
-        position: absolute;
         display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        width: 20px;
-        height: 20px;
-        top: 2px;
-        left: 95px;
     }
     .menu-icon div {
         background-color: white;
@@ -813,9 +832,10 @@ Whole */
 .wrapper-quotes {
     max-width: 1200px;
     height: 92vh;
-    margin: 0 30px;
+    margin: 0 auto;
     display: flex;
     align-self: center;
+    justify-content: center;
 }
 
 
@@ -845,30 +865,6 @@ Whole */
 .quote-paragraph p {
     text-align: justify;
     line-height: 1.2;
-}
-
-@media (max-width:1024px) {
-    .wrapper-quotes {
-        flex-direction: column;
-        height: 100%;
-    }
-    .text-container {
-        flex-basis: 100%;
-        margin: 10px 0px;
-    }
-    .text-wrapper {
-        justify-content: space-around;
-    }
-    /* Second part of page 5 */
-    .quote-text {
-        text-align: center;
-    }
-    .bubbles-container {
-        flex-basis: 100%;
-    }
-    .bubble {
-        margin: 7.5px 0px;
-    }
 }
 
 
@@ -931,6 +927,31 @@ Whole */
 
 .bubble-footer h5 {
     padding-top: 3%;
+}
+
+@media (max-width:1024px) {
+    .wrapper-quotes {
+        flex-direction: column;
+        height: 100%;
+        margin: 0 30px;
+    }
+    .text-container {
+        flex-basis: 100%;
+        margin: 10px 0px;
+    }
+    .text-wrapper {
+        justify-content: space-around;
+    }
+    /* Second part of page 5 */
+    .quote-text {
+        text-align: center;
+    }
+    .bubbles-container {
+        flex-basis: 100%;
+    }
+    .bubble {
+        margin: 7.5px 0px;
+    }
 }
 
 
