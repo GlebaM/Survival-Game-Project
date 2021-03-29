@@ -22,16 +22,15 @@ $(document).ready(function() {
     // FIRST SECTION - jQuerry
 
     // Desktop menu
-    function activeLang() {
-        $(".hidden-lang").toggleClass("active");
-        $(".arrows").toggleClass("active");
-        $(".nav-main").removeClass("show");
-    }
-    $(".switch-lang-wrap").on("click", activeLang)
+    $(".switch-lang-wrap").click(function() {
+            $(".hidden-lang").toggleClass("active");
+            $(".arrows").toggleClass("active");
+            $(".nav-main").removeClass("show");
+        })
+        // $(".switch-lang-wrap").on("click", activeLang)
 
     $(".hidden-lang>li").on('click', function() {
         $(".picked-language").text($(this).text());
-        $(".hidden-lang").removeClass("active");
     });
 
     // Mobile menu
