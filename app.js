@@ -47,7 +47,10 @@ $(document).ready(function() {
         }
     })
 
-    $('.primary-menu a').click(() => $(".nav-main").toggleClass("show"));
+    $('.primary-menu a').click(() => {
+        $(".nav-main").toggleClass("show");
+        $(".stripe-middle, .stripe-bottom").toggleClass("change");
+    });
 
     // SECOND SECTION
     // JS used
