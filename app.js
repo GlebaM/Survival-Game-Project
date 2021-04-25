@@ -26,6 +26,7 @@ $(document).ready(function() {
             $(".hidden-lang").toggleClass("active");
             $(".arrows").toggleClass("active");
             $(".nav-main").removeClass("show");
+            $(".stripe-middle.change, .stripe-bottom.change").removeClass("change");
         })
         // $(".switch-lang-wrap").on("click", activeLang)
 
